@@ -1,0 +1,157 @@
+.search-main {
+  width: 90%;
+  min-width: 300px;
+  max-width: 600px;
+  margin: 4.8rem auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-title {
+  display: block;
+  width: 85%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.search-input-main {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border: none;
+  margin-top: 3.2rem;
+}
+
+.search-input-text {
+  width: 100%;
+  height: 100%;
+  padding-left: 1.8rem;
+  font-size: 1.8rem;
+  border: 2px solid var(--primary-blue);
+  border-radius: 40px;
+  order: 1;
+}
+
+.search-input-text:focus {
+  outline: none;
+  border-width: 3px;
+}
+
+.search-results {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.2rem;
+  border: 2px solid var(--primary-blue);
+  border-radius: 40px;
+  padding: 1rem 0 2.5rem 0;
+  overflow-y: auto;
+}
+
+.result {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.result-info {
+  width: calc(100% - 50px);
+  padding-right: 0.8rem;
+}
+
+.result-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.result-subtitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: gray;
+}
+
+.result-link-main {
+  width: 50px;
+  height: 50px;
+  min-height: 50px;
+}
+
+.result-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/icons/btn-row.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.result-not-found {
+  width: 95%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.result-not-found p {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.pasos-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4.8rem;
+}
+
+.paso-item {
+  width: 90%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.8rem;
+}
+
+.paso-name {
+  display: block;
+  width: 100%;
+  font-size: 2.8rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--primary-blue);
+}
+
+.paso-description {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 1.6rem;
+}
+
+.paso-requisitos {
+  display: block;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--primary-red);
+  margin: 1.6rem;
+}
+
+.paso-image {
+  margin: 2.6rem;
+}

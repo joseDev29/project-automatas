@@ -1,0 +1,59 @@
+<!-- Search -->
+<div class="search-main">
+  <h1 class="search-title">Busca los procesos en los que necesites asesoria</h1>
+  <div class="search-input-main">
+    <input
+      #searchInput
+      class="search-input-text"
+      type="text"
+      name="searchInput"
+      id="searchInput"
+      (input)="onInput($event)"
+      placeholder="Buscar..."
+    />
+  </div>
+
+  <div class="search-results" id="searchResults">
+    <div *ngIf="notResults" class="result-not-found">
+      <p>Sin resultados...</p>
+    </div>
+
+    <div *ngIf="load" class="result-not-found">
+      <p>Buscando...</p>
+    </div>
+
+    <div *ngFor="let resultado of resultados" class="result">
+      <div class="result-info">
+        <p class="result-title">{{ resultado.nombre }}</p>
+        <p class="result-subtitle">{{ resultado.descripcion }}</p>
+      </div>
+      <div class="result-link-main">
+        <a
+          class="result-link"
+          href=""
+          (click)="viewProcess($event, resultado)"
+        ></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pasos-main" *ngIf="activePasos.length">
+  <h1
+    style="
+      font-size: 3.8rem;
+      color: var(--primary-blue);
+      text-align: center;
+      text-decoration: underline;
+    "
+  >
+    {{ activeProcess?.nombre }}
+  </h1>
+
+  <div class="paso-item" *ngFor="let paso of activePasos; index as i">
+    <p class="paso-name">{{ i + 1 }}. {{ paso.nombre }}</p>
+    <p class="paso-description">{{ paso.descripcion }}</p>
+    <p class="paso-requisitos">Requisitos: {{ paso.requisitos }}</p>
+    <img class="paso-image" *ngFor="let img of paso.guias" [src]="img.link" />
+  </div>
+</div>

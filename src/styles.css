@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  --primary-blue: #003b70;
+  --primary-red: #ff535d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
